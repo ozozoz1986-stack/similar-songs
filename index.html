@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>שירים דומים</title>
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>🎵 שירים דומים</h1>
+    <button id="install" class="ghost" hidden>התקנה</button>
+  </header>
+
+  <main>
+    <form id="search" class="search">
+      <input id="query" type="text" dir="auto" autocomplete="off"
+             placeholder="קישור מיוטיוב, או אמן - שיר">
+      <button type="submit">חפש</button>
+    </form>
+    <button id="paste" class="ghost wide" type="button">📋 הדבקת קישור מיוטיוב</button>
+
+    <section id="intro" class="intro">
+      <p><b>איך משתמשים?</b></p>
+      <ol>
+        <li>באפליקציית יוטיוב, בזמן שהשיר מתנגן, לוחצים <b>שיתוף</b>.</li>
+        <li>בוחרים <b>שירים דומים</b> מהרשימה.</li>
+        <li>לוחצים על שיר כדי לפתוח אותו ביוטיוב.</li>
+      </ol>
+      <p class="muted">אם האפליקציה לא מופיעה בתפריט השיתוף, יש להתקין אותה קודם עם הכפתור "התקנה" או מתפריט הדפדפן ← "הוספה למסך הבית".</p>
+    </section>
+
+    <section id="result" hidden>
+      <div id="source" class="source"></div>
+      <nav class="tabs">
+        <button class="tab" data-tab="similar">דומים</button>
+        <button class="tab" data-tab="artist">אותו אמן</button>
+        <button class="tab" data-tab="genre">ז'אנר</button>
+      </nav>
+      <div id="body"></div>
+    </section>
+  </main>
+
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
